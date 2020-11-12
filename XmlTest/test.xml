@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p:requestIin xmlns:p="http://kz.gov.pki.nca" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="p:RequestIin">
+  <GUID>552CB4E9-013A-4000-E000-59870A0C0A02</GUID>
+  <dateMessage>2050-10-12T13:32:04.201Z</dateMessage>
+  <senderCode>JohnConnor</senderCode>
+  <iin>123456789012</iin>
+    <kazakh attr2='тест2' attr1='тест'  >!ӘІҢҒ;:ҮҰҚӨҺ"әіңғ,.үұқөһ" ナルト</kazakh>
+</p:requestIin>

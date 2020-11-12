@@ -1,0 +1,367 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BE3CB0061C327E92003E8315 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3CB0051C327E92003E8315 /* main.m */; };
+		BE3CB0091C327E92003E8315 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3CB0081C327E92003E8315 /* AppDelegate.m */; };
+		BE3CB00C1C327E92003E8315 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3CB00B1C327E92003E8315 /* ViewController.m */; };
+		BE3CB00F1C327E92003E8315 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE3CB00D1C327E92003E8315 /* Main.storyboard */; };
+		BE3CB0121C327E92003E8315 /* XmlTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE3CB0101C327E92003E8315 /* XmlTest.xcdatamodeld */; };
+		BE3CB0141C327E92003E8315 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE3CB0131C327E92003E8315 /* Assets.xcassets */; };
+		BEAFB2041C3A874800BA9A96 /* test.xml in Resources */ = {isa = PBXBuildFile; fileRef = BEAFB2031C3A874800BA9A96 /* test.xml */; };
+		BEAFB2061C3AB2B700BA9A96 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAFB2051C3AB2B700BA9A96 /* libxml2.tbd */; };
+		BEAFB2191C3BDAE000BA9A96 /* Base64.c in Sources */ = {isa = PBXBuildFile; fileRef = BEAFB2171C3BDAE000BA9A96 /* Base64.c */; };
+		BEC83E381C3C6C4F00338050 /* RSA256_bba3ff3629edcbc6b187a69d850dfeefeed64621.p12 in Resources */ = {isa = PBXBuildFile; fileRef = BEC83E371C3C6BEE00338050 /* RSA256_bba3ff3629edcbc6b187a69d850dfeefeed64621.p12 */; };
+		BEC83E391C3C6C4F00338050 /* GOSTKNCA_4f05e9ce6cab58539f494d95d9dea89c7132d64f.p12 in Resources */ = {isa = PBXBuildFile; fileRef = BEC83E361C3C6BCE00338050 /* GOSTKNCA_4f05e9ce6cab58539f494d95d9dea89c7132d64f.p12 */; };
+		BEC83E3A1C3C6C4F00338050 /* GOSTKZ_e56fe5a0899f787815adaf5d256da7a0a70c2c13.p12 in Resources */ = {isa = PBXBuildFile; fileRef = BEC83E351C3C6BBC00338050 /* GOSTKZ_e56fe5a0899f787815adaf5d256da7a0a70c2c13.p12 */; };
+		BED556FD255D8B0C0085283B /* libkalkancrypt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BED556FC255D8B0C0085283B /* libkalkancrypt.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BE3CB0011C327E92003E8315 /* KalkanCrypt_iOS_Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KalkanCrypt_iOS_Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE3CB0051C327E92003E8315 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BE3CB0071C327E92003E8315 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BE3CB0081C327E92003E8315 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BE3CB00A1C327E92003E8315 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BE3CB00B1C327E92003E8315 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BE3CB00E1C327E92003E8315 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BE3CB0111C327E92003E8315 /* XmlTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = XmlTest.xcdatamodel; sourceTree = "<group>"; };
+		BE3CB0131C327E92003E8315 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BE3CB0181C327E92003E8315 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEAFB2031C3A874800BA9A96 /* test.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = test.xml; sourceTree = "<group>"; };
+		BEAFB2051C3AB2B700BA9A96 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		BEAFB2171C3BDAE000BA9A96 /* Base64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Base64.c; sourceTree = "<group>"; };
+		BEAFB2181C3BDAE000BA9A96 /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
+		BEC83E351C3C6BBC00338050 /* GOSTKZ_e56fe5a0899f787815adaf5d256da7a0a70c2c13.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = GOSTKZ_e56fe5a0899f787815adaf5d256da7a0a70c2c13.p12; sourceTree = "<group>"; };
+		BEC83E361C3C6BCE00338050 /* GOSTKNCA_4f05e9ce6cab58539f494d95d9dea89c7132d64f.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = GOSTKNCA_4f05e9ce6cab58539f494d95d9dea89c7132d64f.p12; sourceTree = "<group>"; };
+		BEC83E371C3C6BEE00338050 /* RSA256_bba3ff3629edcbc6b187a69d850dfeefeed64621.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = RSA256_bba3ff3629edcbc6b187a69d850dfeefeed64621.p12; sourceTree = "<group>"; };
+		BED556FC255D8B0C0085283B /* libkalkancrypt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libkalkancrypt.a; path = lib/libkalkancrypt.a; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BE3CAFFE1C327E92003E8315 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BED556FD255D8B0C0085283B /* libkalkancrypt.a in Frameworks */,
+				BEAFB2061C3AB2B700BA9A96 /* libxml2.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BE3CAFF81C327E92003E8315 = {
+			isa = PBXGroup;
+			children = (
+				BED556FC255D8B0C0085283B /* libkalkancrypt.a */,
+				BEAFB2051C3AB2B700BA9A96 /* libxml2.tbd */,
+				BE3CB0031C327E92003E8315 /* XmlTest */,
+				BE3CB0021C327E92003E8315 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BE3CB0021C327E92003E8315 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE3CB0011C327E92003E8315 /* KalkanCrypt_iOS_Sample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE3CB0031C327E92003E8315 /* XmlTest */ = {
+			isa = PBXGroup;
+			children = (
+				BE3CB0071C327E92003E8315 /* AppDelegate.h */,
+				BE3CB0081C327E92003E8315 /* AppDelegate.m */,
+				BE3CB00A1C327E92003E8315 /* ViewController.h */,
+				BE3CB00B1C327E92003E8315 /* ViewController.m */,
+				BE3CB00D1C327E92003E8315 /* Main.storyboard */,
+				BE3CB0131C327E92003E8315 /* Assets.xcassets */,
+				BE3CB0181C327E92003E8315 /* Info.plist */,
+				BE3CB0101C327E92003E8315 /* XmlTest.xcdatamodeld */,
+				BE3CB0041C327E92003E8315 /* Supporting Files */,
+				BEAFB2171C3BDAE000BA9A96 /* Base64.c */,
+				BEAFB2181C3BDAE000BA9A96 /* Base64.h */,
+			);
+			path = XmlTest;
+			sourceTree = "<group>";
+		};
+		BE3CB0041C327E92003E8315 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BEC83E371C3C6BEE00338050 /* RSA256_bba3ff3629edcbc6b187a69d850dfeefeed64621.p12 */,
+				BEC83E361C3C6BCE00338050 /* GOSTKNCA_4f05e9ce6cab58539f494d95d9dea89c7132d64f.p12 */,
+				BEC83E351C3C6BBC00338050 /* GOSTKZ_e56fe5a0899f787815adaf5d256da7a0a70c2c13.p12 */,
+				BEAFB2031C3A874800BA9A96 /* test.xml */,
+				BE3CB0051C327E92003E8315 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BE3CB0001C327E92003E8315 /* KalkanCrypt_iOS_Sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE3CB01B1C327E92003E8315 /* Build configuration list for PBXNativeTarget "KalkanCrypt_iOS_Sample" */;
+			buildPhases = (
+				BE3CAFFD1C327E92003E8315 /* Sources */,
+				BE3CAFFE1C327E92003E8315 /* Frameworks */,
+				BE3CAFFF1C327E92003E8315 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KalkanCrypt_iOS_Sample;
+			productName = XmlTest;
+			productReference = BE3CB0011C327E92003E8315 /* KalkanCrypt_iOS_Sample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BE3CAFF91C327E92003E8315 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = knca;
+				TargetAttributes = {
+					BE3CB0001C327E92003E8315 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = EHBRSNE36T;
+					};
+				};
+			};
+			buildConfigurationList = BE3CAFFC1C327E92003E8315 /* Build configuration list for PBXProject "KalkanCrypt_iOS_Sample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+				Base,
+			);
+			mainGroup = BE3CAFF81C327E92003E8315;
+			productRefGroup = BE3CB0021C327E92003E8315 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BE3CB0001C327E92003E8315 /* KalkanCrypt_iOS_Sample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BE3CAFFF1C327E92003E8315 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEC83E381C3C6C4F00338050 /* RSA256_bba3ff3629edcbc6b187a69d850dfeefeed64621.p12 in Resources */,
+				BEC83E391C3C6C4F00338050 /* GOSTKNCA_4f05e9ce6cab58539f494d95d9dea89c7132d64f.p12 in Resources */,
+				BEC83E3A1C3C6C4F00338050 /* GOSTKZ_e56fe5a0899f787815adaf5d256da7a0a70c2c13.p12 in Resources */,
+				BEAFB2041C3A874800BA9A96 /* test.xml in Resources */,
+				BE3CB0141C327E92003E8315 /* Assets.xcassets in Resources */,
+				BE3CB00F1C327E92003E8315 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BE3CAFFD1C327E92003E8315 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE3CB00C1C327E92003E8315 /* ViewController.m in Sources */,
+				BEAFB2191C3BDAE000BA9A96 /* Base64.c in Sources */,
+				BE3CB0121C327E92003E8315 /* XmlTest.xcdatamodeld in Sources */,
+				BE3CB0091C327E92003E8315 /* AppDelegate.m in Sources */,
+				BE3CB0061C327E92003E8315 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BE3CB00D1C327E92003E8315 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE3CB00E1C327E92003E8315 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BE3CB0191C327E92003E8315 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BE3CB01A1C327E92003E8315 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BE3CB01C1C327E92003E8315 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/include",
+					"$(SDKROOT)/usr/include/libxml2",
+				);
+				INFOPLIST_FILE = XmlTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/lib";
+				PRODUCT_BUNDLE_IDENTIFIER = kz.gov.pki.kalkan.ios.XmlTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		BE3CB01D1C327E92003E8315 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/include",
+					"$(SDKROOT)/usr/include/libxml2",
+				);
+				INFOPLIST_FILE = XmlTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/lib";
+				PRODUCT_BUNDLE_IDENTIFIER = kz.gov.pki.kalkan.ios.XmlTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BE3CAFFC1C327E92003E8315 /* Build configuration list for PBXProject "KalkanCrypt_iOS_Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE3CB0191C327E92003E8315 /* Debug */,
+				BE3CB01A1C327E92003E8315 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE3CB01B1C327E92003E8315 /* Build configuration list for PBXNativeTarget "KalkanCrypt_iOS_Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE3CB01C1C327E92003E8315 /* Debug */,
+				BE3CB01D1C327E92003E8315 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BE3CB0101C327E92003E8315 /* XmlTest.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BE3CB0111C327E92003E8315 /* XmlTest.xcdatamodel */,
+			);
+			currentVersion = BE3CB0111C327E92003E8315 /* XmlTest.xcdatamodel */;
+			path = XmlTest.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BE3CAFF91C327E92003E8315 /* Project object */;
+}
