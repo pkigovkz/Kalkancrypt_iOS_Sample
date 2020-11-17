@@ -262,6 +262,7 @@ const xmlChar* ALG_SHA1 = BAD_CAST "http://www.w3.org/2001/04/xmldsig-more#sha1"
                     withPass:@"newpass"]) {
         NSLog(@"Gost key pair has been generated. Pems: %@, %@", privatePart, publicPart);
     }
+    
     EVP_PKEY_free(key);
     
 }
@@ -374,6 +375,7 @@ const xmlChar* ALG_SHA1 = BAD_CAST "http://www.w3.org/2001/04/xmldsig-more#sha1"
     NSString* docPath = [[paths objectAtIndex:0] path];
     NSString* privatePath = [NSString stringWithFormat:@"%@/%@", docPath, privatePart];
     NSString* publicPath = [NSString stringWithFormat:@"%@/%@", docPath, publicPart];
+    NSString* reqPemPath = [NSString stringWithFormat:@"%@/%@.csr", docPath, publicPart];
     
     BOOL isExist = [[NSFileManager defaultManager] fileExistsAtPath:privatePath];
     if (isExist){
@@ -384,7 +386,7 @@ const xmlChar* ALG_SHA1 = BAD_CAST "http://www.w3.org/2001/04/xmldsig-more#sha1"
         [[NSFileManager defaultManager] removeItemAtPath:publicPath error:nil];
     }
     
-    FILE *private = NULL, *public = NULL;
+    FILE *private = NULL, *public = NULL, *csr = NULL;
     
     @try {
         
@@ -400,6 +402,11 @@ const xmlChar* ALG_SHA1 = BAD_CAST "http://www.w3.org/2001/04/xmldsig-more#sha1"
             NSLog(@"Failed to open file for write: %@", publicPath);
             return false;
         }
+        csr = fopen([reqPemPath fileSystemRepresentation], "w");
+        if (!csr) {
+            NSLog(@"Failed to open file for write: %@", reqPemPath);
+            return false;
+        }
      
         returnCode = PEM_write_PrivateKey(private,key, EVP_aes_128_cbc(), NULL, 0, NULL, [password UTF8String]);
         // без шифрования закрытого ключа
@@ -413,6 +420,58 @@ const xmlChar* ALG_SHA1 = BAD_CAST "http://www.w3.org/2001/04/xmldsig-more#sha1"
             NSLog(@"Failed to write public part, function PEM_write_PUBKEY returned with %d", returnCode);
             return false;
         }
+        
+        // pkcs#10
+        X509_REQ *request = X509_REQ_new();
+        X509_NAME *name = X509_NAME_new();
+        
+        // добавляем необходимые поля в DN
+        returnCode = X509_NAME_add_entry_by_NID(name, NID_commonName, V_ASN1_UTF8STRING, (unsigned char*)"Uzumaki Нәрүтө", -1, -1, 0);
+        returnCode = X509_NAME_add_entry_by_NID(name, NID_countryName, V_ASN1_UTF8STRING, (unsigned char*)"JP", -1, -1, 0);
+        returnCode = X509_REQ_set_subject_name(request, name);
+        
+        struct stack_st_X509_EXTENSION *extensions = sk_X509_EXTENSION_new_null();
+
+        ASN1_OCTET_STRING *octets = ASN1_OCTET_STRING_new();
+        ASN1_OCTET_STRING *keyId = ASN1_OCTET_STRING_new();
+        // здесь НЕОБХОДИМО(!) вычислить sha1-хеш открытого ключа либо генерировать уникальные значения
+        // для идентификатора ключа субъекта
+        ASN1_OCTET_STRING_set(keyId, (unsigned char*)"e380ab58aa06e8ff1bac62ad85e8936d1859f9fe", 20);
+        unsigned char *keyIdOctets = NULL;
+        int keyIdLen = i2d_ASN1_OCTET_STRING(keyId, &keyIdOctets);
+        ASN1_OCTET_STRING_set(octets, keyIdOctets, keyIdLen);
+
+        X509_EXTENSION *extension = X509_EXTENSION_create_by_NID( NULL, NID_subject_key_identifier, 0, octets);
+        sk_X509_EXTENSION_push(extensions, extension);
+        
+        returnCode = X509_REQ_add_extensions_nid(request, extensions, NID_ext_req);
+        
+        returnCode = X509_REQ_set_pubkey(request, key);
+        returnCode = X509_REQ_sign(request, key, EVP_get_digestbynid(NID_id_Gost34311_95));
+        if (returnCode != 64) {
+            NSLog(@"Failed to sign the request. Size: %d", returnCode);
+            return false;
+        }
+
+        int success = X509_REQ_verify(request, key);
+        if(success != 1){
+            NSLog(@"CSR verification failure");
+            return false;
+        } else {
+            NSLog(@"CSR verified.");
+        }
+        returnCode = PEM_write_X509_REQ(csr, request);
+        
+        if (returnCode != 1) {
+            NSLog(@"Failed to write request, function PEM_write_X509_REQ returned with %d", returnCode);
+            return false;
+        }
+        
+        ASN1_OCTET_STRING_free(octets);
+        ASN1_OCTET_STRING_free(keyId);
+        X509_EXTENSION_free(extension);
+        sk_X509_EXTENSION_free(extensions);
+        X509_REQ_free(request);
         return true;
     }
     @catch (NSException *exp) {
@@ -425,6 +484,7 @@ const xmlChar* ALG_SHA1 = BAD_CAST "http://www.w3.org/2001/04/xmldsig-more#sha1"
     @finally {
         fclose(private);
         fclose(public);
+        fclose(csr);
     }
 }
 
